@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="vista.Vista">
+  <grid id="27dc6" binding="pnlPrincipal" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="108" width="1279" height="673"/>
+    </constraints>
+    <properties>
+      <background color="-986896"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="6b7d2" binding="pnlVisor" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <scrollpane id="42885" binding="scrImagen">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <autoscrolls value="false"/>
+              <verifyInputWhenFocusTarget value="false"/>
+            </properties>
+            <border type="none" title="Visor"/>
+            <children>
+              <component id="4f33f" class="javax.swing.JLabel" binding="lblImagen">
+                <constraints/>
+                <properties>
+                  <font size="28" style="1"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="Visor de Imágenes"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+      <scrollpane id="dc03d">
+        <constraints border-constraint="East"/>
+        <properties>
+          <horizontalScrollBarPolicy value="31"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="955dd" binding="pnlLateral" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints/>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="18013" binding="pnlGuardado" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none" title="Guardado"/>
+                <children>
+                  <grid id="eee6f" binding="pnlZoom" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="107" height="155"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Opción de aumento al guardar"/>
+                    </properties>
+                    <border type="none" title="Tamaño"/>
+                    <children>
+                      <component id="58fbc" class="javax.swing.JRadioButton" binding="rbtn2">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="x2"/>
+                        </properties>
+                      </component>
+                      <component id="b296b" class="javax.swing.JRadioButton" binding="rbtn1">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="true"/>
+                          <text value="Original"/>
+                        </properties>
+                      </component>
+                      <component id="d1acd" class="javax.swing.JRadioButton" binding="rbtn3">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="x3"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="365fa" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="817b8" class="javax.swing.JButton" binding="btnGuardar">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <actionCommand value="Guardar"/>
+                          <text value="Guardado rápido"/>
+                          <toolTipText value="Guardado rápido en Escritorio"/>
+                        </properties>
+                      </component>
+                      <component id="7e338" class="javax.swing.JButton" binding="btnExplorar">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <actionCommand value="Guardar como"/>
+                          <text value="Guardar como..."/>
+                          <toolTipText value="Elegir nombre y ruta de guardado"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="3086e" binding="pnlHerramientas" layout-manager="GridLayoutManager" row-count="4" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none" title="Herramientas"/>
+                <children>
+                  <component id="16311" class="javax.swing.JSlider" binding="sldZoom">
+                    <constraints>
+                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="2" use-parent-layout="false">
+                        <preferred-size width="150" height="30"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <inverted value="false"/>
+                      <majorTickSpacing value="1"/>
+                      <maximum value="3"/>
+                      <minimum value="1"/>
+                      <minorTickSpacing value="1"/>
+                      <name value=""/>
+                      <orientation value="0"/>
+                      <paintLabels value="false"/>
+                      <paintTicks value="true"/>
+                      <paintTrack value="true"/>
+                      <snapToTicks value="true"/>
+                      <toolTipText value="Aumento de la visualización"/>
+                      <value value="1"/>
+                      <valueIsAdjusting value="false"/>
+                    </properties>
+                  </component>
+                  <component id="5f48e" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="40" height="30"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font/>
+                      <horizontalAlignment value="0"/>
+                      <horizontalTextPosition value="0"/>
+                      <text value="Zoom"/>
+                    </properties>
+                  </component>
+                  <component id="80a74" class="javax.swing.JButton" binding="btnRecarga">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <actionCommand value="Recarga"/>
+                      <label value="Recargar imagen"/>
+                      <text value="Recargar imagen"/>
+                    </properties>
+                  </component>
+                  <grid id="f9a71" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="1" row-span="2" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none" title="Info"/>
+                    <children>
+                      <component id="323f4" class="javax.swing.JLabel" binding="lblInfoDimensiones">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="20"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <horizontalAlignment value="2"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="fc07d" class="javax.swing.JLabel" binding="lblInfoFecha">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="20"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <horizontalAlignment value="2"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="opcionTamano">
+      <member id="58fbc"/>
+      <member id="b296b"/>
+      <member id="d1acd"/>
+    </group>
+  </buttonGroups>
+</form>

@@ -6,12 +6,17 @@ import controlador.PortapapelesControlador;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.dnd.DragSource;
+import java.awt.dnd.MouseDragGestureRecognizer;
 import java.awt.event.*;
 import java.io.File;
+import java.lang.module.ResolutionException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.ImageIcon;
+import javax.swing.event.MouseInputAdapter;
 import javax.swing.filechooser.FileSystemView;
+import javax.tools.Tool;
 
 public class Vista {
     private JFrame frame;
@@ -82,6 +87,7 @@ public class Vista {
                 mouseY = e.getY();
             }
         });
+        
     }
 
     public void iniciar() {
@@ -184,7 +190,7 @@ public class Vista {
 
     public void tamanoVentana(){
         Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
-        frame.setSize(pantalla.width / 2, pantalla.height / 2);
+        frame.setSize((int)(pantalla.width / 1.5f), (int)(pantalla.height / 1.5f));
     }
 
     public void habilitarPanel(boolean orden){

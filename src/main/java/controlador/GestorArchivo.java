@@ -51,6 +51,12 @@ public class GestorArchivo implements ActionListener{
         if(archivo != null){
             BufferedImage imgFinal =  ic.escalarImagen();
             try {
+                if(archivo.getPath().endsWith(".png")){
+                    System.out.println("Extension ya puesta");
+                }else{
+                    archivo = new File(archivo.getPath() + ".png");
+                    System.out.println("Extension no puesta, Colocamos");
+                }
                 ImageIO.write(imgFinal, "png", archivo);
                 mostrarVentanaInfo("Recorte guardado en: " + archivo.getPath());
             }catch(IOException e){

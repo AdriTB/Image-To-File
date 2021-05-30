@@ -152,7 +152,7 @@
                       <paintTicks value="true"/>
                       <paintTrack value="true"/>
                       <snapToTicks value="true"/>
-                      <toolTipText value="Aumento de la visualización"/>
+                      <toolTipText value="Ajuste del tamaño de la visualización"/>
                       <value value="1"/>
                       <valueIsAdjusting value="false"/>
                     </properties>
@@ -225,6 +225,7 @@
       <member id="58fbc"/>
       <member id="b296b"/>
       <member id="d1acd"/>
+      <member id="92b90"/>
     </group>
   </buttonGroups>
 </form>

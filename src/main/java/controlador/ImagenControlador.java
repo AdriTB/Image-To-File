@@ -103,8 +103,8 @@ public class ImagenControlador implements ChangeListener {
         Image imagenEscalada = imgOriginal;
         if(zoom != 1){
             imagenEscalada = imgOriginal.getScaledInstance(
-                    imgOriginal.getWidth(null) * zoomGuardado,
-                    imgOriginal.getHeight(null) * zoomGuardado,
+                    (int)(imgOriginal.getWidth(null) * zoomGuardado),
+                    (int)(imgOriginal.getHeight(null) * zoomGuardado),
                     Image.SCALE_SMOOTH);
         }
         BufferedImage imagenFinal = new BufferedImage(
@@ -124,7 +124,7 @@ public class ImagenControlador implements ChangeListener {
     @Override
     public void stateChanged(ChangeEvent e) {
         JSlider js = (JSlider)e.getSource();
-        zoom = js.getValue() -1;
+        zoom = js.getValue()-1;
         if(imgOriginal != null){
             vista.colocarImagen(imgEscaladasVisor[zoom]);
             actualizarInfo();
